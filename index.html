@@ -16,9 +16,21 @@ xhttp.onreadystatechange = function() {
 };
 xhttp.open("GET", "/apiCard/random", true);
 xhttp.send();
+
+var xhttpiBricks = new XMLHttpRequest();
+xhttpiBricks.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+       // Typical action to be performed when the document is ready:
+       document.getElementById("ibricks").innerHTML = xhttpiBricks.responseText;
+    }
+};
+xhttpiBricks.open("GET", "/apiIbricks/forms?orgId=F1AAA", true);
+xhttpiBricks.send();
 </script>
 <p>This is a paragraph.</p>
 <div id="demo"></div>
+<br>
+<div id="iBricks"></div>
 
 </body>
 </html>

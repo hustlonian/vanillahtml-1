@@ -1,1 +1,2 @@
 /apiCard/* https://api.scryfall.com/cards/:splat 200
+/apiIbricks/* https://ibricks.no/api/:splat 200
